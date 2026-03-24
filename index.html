@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CalcPro - Modern Scientific Calculator</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="controls">
         <button id="theme-toggle" class="toggle-btn">Switch to Light Mode</button>
         <button id="scientific-toggle" class="toggle-btn">Scientific Mode</button>
+        <button id="converter-toggle" class="toggle-btn">Converter</button>
         <button id="history-toggle" class="toggle-btn">History</button>
     </div>
     <div class="container">
@@ -58,6 +60,25 @@
             <ul id="history-items"></ul>
         </div>
         </div>
+        </div>
+
+        <div class="converter-panel">
+            <h3><i class="fas fa-exchange-alt"></i> Unit Converter</h3>
+            <div class="converter-grid">
+                <select id="convert-type">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temp">Temperature</option>
+                </select>
+                <div class="convert-inputs">
+                    <input type="number" id="convert-from-val" placeholder="Value">
+                    <select id="convert-from-unit"></select>
+                </div>
+                <div class="convert-to">
+                    <span id="convert-res">0</span>
+                    <select id="convert-to-unit"></select>
+                </div>
+            </div>
         </div>
 
         <script type="module" src="src/js/script.js"></script>

@@ -27,11 +27,13 @@
 ## 🌟 Key Features
 
 - ⚡ **Accurate Calculations**: Powered by [MathJS](https://mathjs.org/) for high-precision results.
+- ⌨️ **Full Keyboard Support**: Fast input handling for all numeric and arithmetic keys.
 - ⚗️ **Scientific Mode**: Advanced functions including `sin`, `cos`, `tan`, `log10`, `sqrt`, and more.
+- 📏 **Unit Converter**: Integrated real-time conversion for Length, Weight, and Temperature.
 - 📜 **Calculation History**: Automatically saves and persists your last 20 calculations.
-- 🌓 **Dark/Light Mode**: Beautifully designed themes that persist across sessions.
-- 📱 **Fully Responsive**: Optimized for desktop, tablet, and mobile devices.
-- 🔒 **Security Hardened**: Replaced unsafe `eval()` with a robust expression parser.
+- 🌓 **Dark/Light Mode**: Beautifully designed themes with persistence.
+- 📱 **Fully Responsive**: Optimized with micro-interactions and touch feedback.
+- 🔒 **Security Hardened**: Safe expression parsing with zero `eval()`.
 
 ---
 
