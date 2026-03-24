@@ -134,16 +134,39 @@ const convertRes = document.getElementById('convert-res');
 const units = {
     length: { 'm': 1, 'km': 1000, 'cm': 0.01, 'mm': 0.001, 'in': 0.0254, 'ft': 0.3048 },
     weight: { 'kg': 1, 'g': 0.001, 'mg': 0.000001, 'lb': 0.453592, 'oz': 0.0283495 },
-    temp: { 'C': 'C', 'F': 'F', 'K': 'K' }
+    temp: { 'C': 'C', 'F': 'F', 'K': 'K' },
+    currency: {} // Will be populated by API
 };
+
+let exchangeRates = null;
+
+async function fetchExchangeRates() {
+    try {
+        convertRes.textContent = 'Loading rates...';
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        const data = await response.json();
+        exchangeRates = data.rates;
+        units.currency = exchangeRates;
+        if (convertType.value === 'currency') updateUnitOptions();
+        else convertRes.textContent = '0';
+    } catch (err) {
+        console.error('Failed to fetch exchange rates:', err);
+        convertRes.textContent = 'Error loading rates';
+    }
+}
 
 converterToggle.onclick = () => {
     document.querySelector('.container').classList.toggle('show-converter');
+    if (exchangeRates === null) fetchExchangeRates();
     updateUnitOptions();
 };
 
 function updateUnitOptions() {
     const type = convertType.value;
+    if (type === 'currency' && !exchangeRates) {
+        fetchExchangeRates();
+        return;
+    }
     const options = Object.keys(units[type]);
     convertFromUnit.innerHTML = options.map(u => `<option value="${u}">${u}</option>`).join('');
     convertToUnit.innerHTML = options.map(u => `<option value="${u}">${u}</option>`).join('');
@@ -172,6 +195,12 @@ function performConversion() {
         else if (to === 'F') res = (celsius * 9 / 5) + 32;
         else res = celsius + 273.15;
         convertRes.textContent = res.toFixed(2);
+    } else if (type === 'currency') {
+        if (!exchangeRates) return;
+        // All rates are relative to USD in this API
+        const usdVal = val / exchangeRates[from];
+        const res = usdVal * exchangeRates[to];
+        convertRes.textContent = res.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     } else {
         const res = (val * units[type][from]) / units[type][to];
         convertRes.textContent = res.toFixed(4);
