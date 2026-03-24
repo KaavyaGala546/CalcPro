@@ -30,6 +30,7 @@
 - ⌨️ **Full Keyboard Support**: Fast input handling for all numeric and arithmetic keys.
 - ⚗️ **Scientific Mode**: Advanced functions including `sin`, `cos`, `tan`, `log10`, `sqrt`, and more.
 - 📏 **Unit Converter**: Integrated real-time conversion for Length, Weight, and Temperature.
+- 💱 **Currency Converter**: Real-time exchange rates for 100+ global currencies.
 - 📜 **Calculation History**: Automatically saves and persists your last 20 calculations.
 - 🌓 **Dark/Light Mode**: Beautifully designed themes with persistence.
 - 📱 **Fully Responsive**: Optimized with micro-interactions and touch feedback.
