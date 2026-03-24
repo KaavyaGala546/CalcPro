@@ -65,17 +65,18 @@ The UI follows **Glassmorphism** principles, using CSS backdrops, subtle gradien
 
 ## 📁 Project Structure
 
-CalcPro/  
+CalcPro/
 ├── public/           # Static assets (fonts, demo)
 │   └── assets/
 ├── src/              # Source code
 │   ├── css/
 │   │   └── style.css
 │   └── js/
-│       └── script.js
-├── index.html        # Root entry
-├── package.json      # Dependencies  
-└── README.md  
+│       ├── modules/      # ES Modules (Logic split)
+│       └── script.js     # Entry point
+├── index.html            # Root entry
+├── package.json          # Dependencies
+└── README.md
 
 ---
 
