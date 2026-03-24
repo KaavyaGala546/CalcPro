@@ -207,7 +207,11 @@ function performConversion() {
     }
 }
 
-[convertType, convertFromVal, convertFromUnit, convertToUnit].forEach(el => {
+convertType.onchange = () => {
+    updateUnitOptions();
+};
+
+[convertFromVal, convertFromUnit, convertToUnit].forEach(el => {
     el.oninput = performConversion;
 });
 
