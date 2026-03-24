@@ -81,10 +81,10 @@ CalcPro/
 
 ## ⚙️ Getting Started
 
-1. **Clone the repository:**
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/KaavyaGala546/CalcPro.git
-   cd CalcPro/CalcPro
+   cd CalcPro
    ```
 
 2. **Install dependencies:**
