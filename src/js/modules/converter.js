@@ -1,3 +1,5 @@
+import { UI } from './ui.js';
+
 export function initConverter() {
     const converterToggle = document.getElementById('converter-toggle');
     const convertType = document.getElementById('convert-type');
@@ -17,7 +19,7 @@ export function initConverter() {
 
     async function fetchExchangeRates() {
         try {
-            convertRes.textContent = 'Loading rates...';
+            UI.setLoading(convertRes, true);
             const res = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
             const data = await res.json();
             exchangeRates = data.rates;
@@ -66,7 +68,7 @@ export function initConverter() {
     };
 
     converterToggle.onclick = () => {
-        document.querySelector('.container').classList.toggle('show-converter');
+        UI.togglePanel('.container', 'show-converter');
         if (exchangeRates === null) fetchExchangeRates();
         updateUnitOptions();
     };

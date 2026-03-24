@@ -7,6 +7,8 @@
 
 > A modern, professional scientific calculator with history, themes, and robust calculation logic.
 
+![CalcPro Demo](./public/assets/demo.webp)
+
 🔗 **Live Demo:** https://modern-calculator-wihz.vercel.app  
 💻 **Source Code:** https://github.com/KaavyaGala546/CalcPro
 
@@ -15,12 +17,6 @@
 ## 🚀 Overview
 
 **CalcPro** is a sleek, high-performance calculator application. It combines a beautiful, "glassmorphism" inspired UI with powerful scientific features and a reliable computation engine.
-
----
-
-## 📸 Demo
-
-![CalcPro Demo](./assets/demo.webp)
 
 ---
 

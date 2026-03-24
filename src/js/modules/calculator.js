@@ -1,4 +1,4 @@
-import * as math from 'mathjs';
+import { UI } from './ui.js';
 
 export function initCalculator(historyManager) {
     const display = document.querySelector('.value');
@@ -44,16 +44,6 @@ function handleInput(input, display, historyManager) {
             display.value += input;
         }
     } catch (err) {
-        triggerError(display);
+        UI.triggerError(display);
     }
-}
-
-function triggerError(display) {
-    const original = display.value;
-    display.value = 'Invalid Entry';
-    display.classList.add('shake');
-    setTimeout(() => {
-        display.value = '';
-        display.classList.remove('shake');
-    }, 1000);
 }
