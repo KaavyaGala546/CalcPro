@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
+    <div class="controls">
+        <button id="theme-toggle" class="toggle-btn">Switch to Light Mode</button>
+        <button id="scientific-toggle" class="toggle-btn">Scientific Mode</button>
+        <button id="history-toggle" class="toggle-btn">History</button>
+    </div>
     <div class="container">
         <div class="calculator">
         <input type="text" class="value" readonly>
+
+        <div class="scientific-keys">
+            <button class="num sci" data-button="sin("><i>sin</i></button>
+            <button class="num sci" data-button="cos("><i>cos</i></button>
+            <button class="num sci" data-button="tan("><i>tan</i></button>
+            <button class="num sci" data-button="log10("><i>log</i></button>
+            <button class="num sci" data-button="PI"><i>π</i></button>
+            <button class="num sci" data-button="E"><i>e</i></button>
+            <button class="num sci" data-button="^"><i>x<sup>y</sup></i></button>
+            <button class="num sci" data-button="sqrt("><i>√</i></button>
+            <button class="num sci" data-button="("><i>(</i></button>
+            <button class="num sci" data-button=")"><i>)</i></button>
+        </div>
 
         <button class="num clear" data-button="C"><i>C</i></button>
         <button class="num" data-button="CE"><i>CE</i></button>
@@ -34,9 +52,14 @@
         <button class="num" data-button="0"><i>0</i></button>
         <button class="num" data-button="00"><i>00</i></button>
         <button class="num" data-button="."><i>.</i></button>
+
+        <div id="history-list" class="history-panel">
+            <h3>History <button id="clear-history">Clear</button></h3>
+            <ul id="history-items"></ul>
+        </div>
         </div>
         </div>
 
-        <script src="script.js"></script>
+        <script type="module" src="src/js/script.js"></script>
 </body>
 </html>

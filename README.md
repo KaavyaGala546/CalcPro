@@ -1,6 +1,11 @@
 # ✨ CalcPro
 
-> A modern, responsive calculator web app with a clean UI and fast, accurate computations.
+[![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![MathJS](https://img.shields.io/badge/MathJS-13.0-AD1457?logo=mathjs&logoColor=white)](https://mathjs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-success)
+
+> A modern, professional scientific calculator with history, themes, and robust calculation logic.
 
 🔗 **Live Demo:** https://modern-calculator-wihz.vercel.app  
 💻 **Source Code:** https://github.com/KaavyaGala546/CalcPro
@@ -9,101 +14,101 @@
 
 ## 🚀 Overview
 
-**CalcPro** is a sleek calculator application built to deliver a smooth and intuitive user experience.  
-It focuses on performance, clean design, and reliable calculation logic using core web technologies.
+**CalcPro** is a sleek, high-performance calculator application. It combines a beautiful, "glassmorphism" inspired UI with powerful scientific features and a reliable computation engine.
 
-This project demonstrates strong fundamentals in frontend development, including DOM manipulation, event handling, and responsive UI design.
+---
+
+## 📸 Demo
+
+![CalcPro Demo](./assets/demo.webp)
 
 ---
 
 ## 🌟 Key Features
 
-- ⚡ Fast and accurate calculations  
-- 🎯 Clean, modern, and intuitive UI  
-- 📱 Fully responsive design  
-- 🧠 Efficient JavaScript logic handling  
-- ❌ Error handling for invalid inputs  
-- 🖱️ Smooth button interactions  
+- ⚡ **Accurate Calculations**: Powered by [MathJS](https://mathjs.org/) for high-precision results.
+- ⚗️ **Scientific Mode**: Advanced functions including `sin`, `cos`, `tan`, `log10`, `sqrt`, and more.
+- 📜 **Calculation History**: Automatically saves and persists your last 20 calculations.
+- 🌓 **Dark/Light Mode**: Beautifully designed themes that persist across sessions.
+- 📱 **Fully Responsive**: Optimized for desktop, tablet, and mobile devices.
+- 🔒 **Security Hardened**: Replaced unsafe `eval()` with a robust expression parser.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **HTML5** – Structure  
-- **CSS3** – Styling & layout  
-- **JavaScript** – Logic & interactivity  
+- **Vite** – Fast build tool and dev server
+- **MathJS** – Powerful mathematical logic
+- **HTML5** – Semantic structure
+- **CSS3** – Modern "glass" styling & layout
+- **JavaScript (ES6+)** – Modular logic
 
 ---
 
-## 🧩 Architecture
+## 🔍 Technical Implementation
 
-- Event-driven input handling  
-- Dynamic expression evaluation  
-- DOM-based UI updates  
-- Modular separation of UI and logic  
+### 🧠 Robust Computation
+Unlike standard calculators that use the dangerous `eval()` function, **CalcPro** utilizes the `mathjs` expression parser. This not only prevents security vulnerabilities like XSS but also allows for more complex string-based mathematical expressions.
+
+### 💾 State Persistence
+To provide a seamless user experience, we use the **Web Storage API (LocalStorage)** to:
+1.  **Remember Theme Preference**: Your choice of Dark or Light mode is saved.
+2.  **Maintain History**: Your past calculations are stored locally and reloaded every time you visit.
+
+### 🎨 Design System
+The UI follows **Glassmorphism** principles, using CSS backdrops, subtle gradients, and CSS variables to handle theme transitions smoothly without any page reloads.
 
 ---
 
 ## 📁 Project Structure
 
 CalcPro/  
-├── index.html        # UI structure  
-├── style.css         # Styling  
-├── script.js         # Core logic  
+├── public/           # Static assets (fonts, demo)
+│   └── assets/
+├── src/              # Source code
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+├── index.html        # Root entry
+├── package.json      # Dependencies  
 └── README.md  
 
 ---
 
 ## ⚙️ Getting Started
 
-git clone https://github.com/KaavyaGala546/CalcPro.git  
-cd CalcPro  
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/KaavyaGala546/CalcPro.git
+   cd CalcPro/CalcPro
+   ```
 
-Open `index.html` in your browser  
-or use Live Server for development.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
----
-
-## 📸 Preview
-
-_Add a screenshot or GIF here to boost impact_
-
-Example:
-
-![Preview](./assets/preview.png)
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
 ---
 
 ## 🧠 What This Project Shows
 
-- Strong understanding of **JavaScript fundamentals**
-- Clean **UI/UX design thinking**
-- Practical implementation of a **real-world mini application**
-- Ability to structure and ship a **deployable project**
-
----
-
-## 🔮 Future Enhancements
-
-- Scientific calculator functions (sin, cos, log)
-- Keyboard input support
-- Dark / Light mode toggle
-- Calculation history
-- Improved animations & transitions
-
----
-
-## 🚀 Deployment
-
-Deployed on **Vercel**  
-🔗 https://modern-calculator-wihz.vercel.app
+- Expertise in **Modern JavaScript** and library integration.
+- Precision in **UI/UX Design** and theme implementation.
+- Focus on **Application Security** and best practices.
+- Professional **State Persistence** using web APIs.
 
 ---
 
 ## 👩‍💻 Author
 
 **Kaavya Gala**  
-GitHub: https://github.com/KaavyaGala546  
+GitHub: [KaavyaGala546](https://github.com/KaavyaGala546)
 
 ---
 
@@ -116,3 +121,4 @@ If you found this project useful, give it a **star** ⭐ — it helps!
 ## 📄 License
 
 This project is licensed under the MIT License.
+
